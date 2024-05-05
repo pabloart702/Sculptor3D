@@ -24,3 +24,46 @@ Sculptor::~Sculptor(){
     }
     free(v) ;
 }
+
+void Sculptor::setColor(float r, float g, float b, float a){
+    r = r;
+    g = g;
+    b = b;
+    a = a;
+}
+
+void Sculptor::putVoxel(int x, int y, int z){
+    v[x][y][z].show = true;
+    v[x][y][z].r = r;
+    v[x][y][z].g = g;
+    v[x][y][z].b = b;
+    v[x][y][z].a = a;
+}
+
+void Sculptor::cutVoxel(int x, int y, int z){
+    v[x][y][z].show = false;
+}
+
+
+
+//Grava a escultura no formato OFF no arquivo filename
+void Sculptor::writeOFF(const char *filename){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
