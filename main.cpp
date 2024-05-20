@@ -1,11 +1,15 @@
 #include "sculptor.h"
 
-int main()
-{
-    // cria um escultor cuja matriz tem 27x27x55 voxels
-    Sculptor torre(25, 25, 55);
-    // para mudar a cor do voxel
+/**
+ * \mainpage
+ * @brief Sculptor 3D implementado em C++, tendo como objetivo criar esculturas em 3D utilizando cubos
+ * @return
+ */
 
+int main(){
+    //Cria um escultor cuja matriz tem 27x27x55 voxels
+    Sculptor torre(25, 25, 55);
+    //Muda a cor do voxel
     torre.setColor(0.22, 0.23, 0.23, 1.0); //parte sombreada da torre
 
     //Primeira camada da torre
@@ -75,45 +79,20 @@ int main()
 
     //Nona camada da torre
     torre.putBox(5, 19, 5, 19, 8, 8);
-    //torre.cutBox(10, 14, 19, 19, 8, 8);
-    //torre.cutBox(10, 14, 5, 5, 8, 8);
-   // torre.cutBox(19, 19, 10, 14, 8, 8);
-   // torre.cutBox(5, 5, 10, 14, 8, 8);
     torre.cutBox(6, 18, 6, 18, 8, 8);
 
     //Decima camada da torre
     torre.putBox(5, 19, 5, 19, 9, 9);
-    //torre.cutBox(10, 14, 19, 19, 8, 8);
-    //torre.cutBox(10, 14, 5, 5, 8, 8);
-    // torre.cutBox(19, 19, 10, 14, 8, 8);
-    // torre.cutBox(5, 5, 10, 14, 8, 8);
     torre.cutBox(6, 18, 6, 18, 9, 9);
-
-    //Decima primeira camada da torre
-    //torre.putBox(5, 19, 5, 19, 10, 10);
-    //torre.cutBox(10, 14, 19, 19, 8, 8);
-    //torre.cutBox(10, 14, 5, 5, 8, 8);
-    // torre.cutBox(19, 19, 10, 14, 8, 8);
-    // torre.cutBox(5, 5, 10, 14, 8, 8);
-    //torre.cutBox(6, 18, 6, 18, 10, 10);
 
     //Decima segunda camada da torre
     torre.setColor(0.22, 0.23, 0.23, 1.0); //parte sombreada da torre
     torre.putBox(4, 20, 4, 20, 10, 10);
-    //torre.cutBox(10, 14, 19, 19, 8, 8);
-    //torre.cutBox(10, 14, 5, 5, 8, 8);
-    // torre.cutBox(19, 19, 10, 14, 8, 8);
-    // torre.cutBox(5, 5, 10, 14, 8, 8);
     torre.cutBox(5, 19, 5, 19, 10, 10);
-
 
     //Decima terceira camada da torre
     torre.setColor(0.79, 0.69, 0.56, 1.0); //cor da torre
     torre.putBox(4, 20, 4, 20, 11, 11);
-    //torre.cutBox(10, 14, 19, 19, 8, 8);
-    //torre.cutBox(10, 14, 5, 5, 8, 8);
-    // torre.cutBox(19, 19, 10, 14, 8, 8);
-    // torre.cutBox(5, 5, 10, 14, 8, 8);
     torre.cutBox(7, 17, 7, 17, 11, 11);
 
     //Decima quarta camada da torre
@@ -339,22 +318,25 @@ int main()
     torre.putBox(11, 13, 11, 13, 46, 46);
     torre.cutBox(12, 12, 12, 12, 46, 46);
 
-    torre.setColor(0.22, 0.23, 0.23, 1.0); //parte sombreada da torre
+    torre.setColor(0.22, 0.23, 0.23, 0.5); //parte sombreada da torre
     torre.putBox(10, 14, 10, 14, 47, 47);
     torre.cutBox(11, 13, 11, 13, 47, 47);
 
-    torre.setColor(0.79, 0.69, 0.56, 1.0); //cor da torre
+    torre.setColor(0.79, 0.69, 0.56, 1.0);
     torre.putBox(10, 14, 10, 14, 48, 48);
     torre.cutBox(11, 13, 11, 13, 48, 48);
 
-    torre.setColor(0.22, 0.23, 0.23, 1.0); //parte sombreada da torre
+    torre.setColor(0.22, 0.23, 0.23, 0.5);
+
+
     torre.putBox(11, 13, 11, 13, 49, 49);
     torre.cutBox(12, 12, 12, 12, 49, 49);
 
     torre.putBox(12, 12, 12, 12, 50, 50);
 
-
-    //torre.cutBox(1,8,1,9,1,9);
+    //Lua
+    torre.setColor(0.86, 0.86, 0.85, 1.0);
+    torre.putSphere(3, 21, 45, 3);
 
     // grava a escultura digital no arquivo "torre.off"
     torre.writeOFF("C:/Users/filho/Documents/GitHub/Sculptor3D/torre.off");
