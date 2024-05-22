@@ -4,7 +4,7 @@
 #include <iomanip>
 
 /**
- * @brief Construtor da classe sculptor3D, com parâmetros que definem as dimenções da modelagem e faz a aloação dinamica da memória de acordo com os parâmetros fornecidos
+ * @brief Construtor da  classe sculptor3D, com parâmetros que definem as dimenções da modelagem e faz a aloação dinamica da memória de acordo com os parâmetros fornecidos
  * @param _nx Dimensão do eixo x (em voxels)
  * @param _ny Dimensão do eixo y (em voxels)
  * @param _nz Dimensão do eixo z (em voxels)
