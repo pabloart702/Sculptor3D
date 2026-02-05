@@ -339,7 +339,7 @@ int main(){
     torre.putSphere(3, 21, 45, 3);
 
     // grava a escultura digital no arquivo "torre.off"
-    torre.writeOFF("C:/Users/filho/Documents/GitHub/Sculptor3D/torre.off");
+    torre.writeOFF("torre.off");
 
     return 0;
 }
